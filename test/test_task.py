@@ -28,7 +28,16 @@ class test_task(unittest.TestCase):
         
 
     def test_get_integer_max_attempts(self):
-        #Sub-task 3 – Mock Console Input With Built In
+        #Sub-task 3 –
+        my_mock = Mock()
+        get_string()
+        my_mock.return_value = "abc"
+        my_mock.return_value = "abc"        
+        my_mock.return_value = "abc"
+        my_mock.return_value = "abc"
+        my_mock.return_value = "abc"
+        self.assertEqual(my_mock.return_value, get_integer()) #Mock Console Input With Built In
+        
         pass
 
     def test_get_csv_rows(self):
