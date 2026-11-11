@@ -20,7 +20,12 @@ class test_task(unittest.TestCase):
 
     def test_get_game_info(self):
         #Sub-task 2 – Mock Console Game Info
-        pass
+        my_mock = Mock()
+        get_string()
+        my_mock.return_value = "Derek"
+        my_mock.return_value = "3"
+        self.assertEqual(my_mock.return_value, get_game_info("Derek", "3"))
+        
 
     def test_get_integer_max_attempts(self):
         #Sub-task 3 – Mock Console Input With Built In
