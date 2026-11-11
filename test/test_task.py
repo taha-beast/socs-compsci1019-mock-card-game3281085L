@@ -4,12 +4,19 @@ from card_game.communication.ConsoleInOut import *
 from card_game.card.entity.Deck import *
 from card_game.Game import *
 from card_game.LoadCSV import *
+from unittest.mock import Mock
+
 
 class test_task(unittest.TestCase):
+    
 
     def test_get_input_integer(self):
         #Sub-task 1: Mock Console Input Integer
-        pass
+        my_mock = Mock()
+        get_string()
+        my_mock.return_value = "18"
+        self.assertEqual(my_mock.return_value, get_input_integer(18))
+        
 
     def test_get_game_info(self):
         #Sub-task 2 – Mock Console Game Info
